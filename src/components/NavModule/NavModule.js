@@ -76,10 +76,11 @@ const NavModule = () => {
                 {/* <StyledImg src="/logo.svg" /> */}
                 <div
                   style={{
-                    width: "220px",
-                    height: "100px",
+                    width: "192.5px",
+                    height: "87.5px",
                     fontFamily: "Share Tech Mono",
                     fontSize: "17px",
+                    marginRight: "50px",
                   }}
                 >
                   {/* <StaticImage src="../logo.svg" /> */}

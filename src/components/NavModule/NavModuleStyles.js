@@ -15,7 +15,7 @@ export const NavModuleStyles = styled.nav`
     }
 
     @media (min-width: 1440px) {
-      padding-top: 70px;
+      padding-top: 40px;
     }
   }
 
