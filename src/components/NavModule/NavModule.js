@@ -20,6 +20,11 @@ import {
   menuList,
   subMenuNavVariants,
 } from "./NavAnim"
+import styled from "styled-components"
+
+const StyledImg = styled.img`
+  width: 300px;
+`
 
 const NavModule = () => {
   const featuredProduct = useFeaturedProduct()
@@ -66,8 +71,10 @@ const NavModule = () => {
           {title && (
             <LogoStyles>
               <Link to="/">
-                {title}
-                <span>.</span>
+                {/* {title}
+                <span>.</span> */}
+
+                <StyledImg src="/logo.png" />
               </Link>
             </LogoStyles>
           )}

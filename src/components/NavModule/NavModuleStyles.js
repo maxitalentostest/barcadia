@@ -163,6 +163,7 @@ export const LogoStyles = styled.div`
   font-weight: 700;
   font-size: 20px;
   letter-spacing: -0.5px;
+  margin-right: -50px;
 
   a {
     color: #fff;

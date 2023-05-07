@@ -3,6 +3,7 @@ import { MenuProvider } from "./src/components/MenuContext"
 import { AnimatePresence } from "framer-motion"
 import "@fontsource/heebo/400.css"
 import "@fontsource/heebo/700.css"
+import "@fontsource/share-tech-mono"
 
 export function wrapPageElement({ element }) {
   return <AnimatePresence exitBeforeEnter>{element}</AnimatePresence>

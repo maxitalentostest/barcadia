@@ -11,12 +11,14 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "gatsby-provision": "gatsby-provision-contentful --contentful-data-path='./content-model.json' --space-id=$CONTENTFUL_SPACE_ID --management-token=$CONTENTFUL_MANAGEMENT_TOKEN"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.10.1",
     "@contentful/rich-text-types": "^15.10.1",
     "@fontsource/heebo": "^4.5.2",
+    "@fontsource/share-tech-mono": "^4.5.9",
     "babel-plugin-styled-components": "^2.0.2",
     "dotenv": "^10.0.0",
     "framer-motion": "^5.5.5",
