@@ -1,0 +1,9 @@
+<svg height="50" width="110">
+   <line x1="43" y1="2" x2="43" y2="12" style="stroke:#6fdde0;stroke-width:0.6" />
+   <line x1="43" y1="38" x2="43" y2="48" style="stroke:#6fdde0;stroke-width:0.6" />
+   <line x1="43" y1="48" x2="73" y2="48" style="stroke:#6fdde0;stroke-width:0.6" />
+   <line x1="43" y1="2" x2="73" y2="2" style="stroke:#6fdde0;stroke-width:0.6" />
+   <line x1="73" y1="2" x2="73" y2="12" style="stroke:#6fdde0;stroke-width:0.6" />
+   <line x1="73" y1="38" x2="73" y2="48" style="stroke:#6fdde0;stroke-width:0.6" />
+  <text font-family="Share Tech Mono" x="4" y="30" fill="#fff">MaxiTalentos</text>
+</svg>

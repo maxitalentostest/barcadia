@@ -21,10 +21,9 @@ import {
   subMenuNavVariants,
 } from "./NavAnim"
 import styled from "styled-components"
+import { StaticImage } from "gatsby-plugin-image"
 
-const StyledImg = styled.img`
-  width: 300px;
-`
+const StyledImg = styled.img``
 
 const NavModule = () => {
   const featuredProduct = useFeaturedProduct()
@@ -74,7 +73,69 @@ const NavModule = () => {
                 {/* {title}
                 <span>.</span> */}
 
-                <StyledImg src="/logo.png" />
+                {/* <StyledImg src="/logo.svg" /> */}
+                <div
+                  style={{
+                    width: "220px",
+                    height: "100px",
+                    fontFamily: "Share Tech Mono",
+                    fontSize: "17px",
+                  }}
+                >
+                  {/* <StaticImage src="../logo.svg" /> */}
+                  <svg width="100%" height="100%" viewBox="0 0 110 50">
+                    <line
+                      x1="43"
+                      y1="2"
+                      x2="43"
+                      y2="12"
+                      style={{ stroke: "#6fdde0", strokeWidth: "0.6" }}
+                    />
+                    <line
+                      x1="43"
+                      y1="38"
+                      x2="43"
+                      y2="48"
+                      style={{ stroke: "#6fdde0", strokeWidth: "0.6" }}
+                    />
+                    <line
+                      x1="43"
+                      y1="48"
+                      x2="73"
+                      y2="48"
+                      style={{ stroke: "#6fdde0", strokeWidth: "0.6" }}
+                    />
+                    <line
+                      x1="43"
+                      y1="2"
+                      x2="73"
+                      y2="2"
+                      style={{ stroke: "#6fdde0", strokeWidth: "0.6" }}
+                    />
+                    <line
+                      x1="73"
+                      y1="2"
+                      x2="73"
+                      y2="12"
+                      style={{ stroke: "#6fdde0", strokeWidth: "0.6" }}
+                    />
+                    <line
+                      x1="73"
+                      y1="38"
+                      x2="73"
+                      y2="48"
+                      style={{ stroke: "#6fdde0", strokeWidth: "0.6" }}
+                    />
+                    <text
+                      font-family="Share Tech Mono"
+                      x="4"
+                      y="30"
+                      fill="#fff"
+                    >
+                      MaxiTalentos
+                    </text>
+                  </svg>
+                </div>
               </Link>
             </LogoStyles>
           )}
