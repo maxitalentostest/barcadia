@@ -5,10 +5,6 @@ import { StaticImage } from "gatsby-plugin-image"
 import Button from "../Button/Button"
 
 const BannerModule = ({ children, title, subTitle, price, enquire }) => {
-  function scrollToArea() {
-    navigate("#topContent")
-  }
-
   return (
     <>
       <BannerModuleStyles>
@@ -49,7 +45,7 @@ const BannerModule = ({ children, title, subTitle, price, enquire }) => {
                   to="/contact"
                 />
               )}
-              <Button onClick={scrollToArea} text="Learn More" />
+              <Button as={Link} to="/acerca" text="Leer más" />
             </div>
           </div>
         </div>

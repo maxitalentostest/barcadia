@@ -1,18 +1,22 @@
 export const menuItems = [
   {
     path: "/",
-    text: "home",
+    text: "inicio",
   },
   {
-    path: "/about",
-    text: "about",
+    path: "/acerca",
+    text: "acerca",
   },
   {
-    path: "/news",
-    text: "news",
+    path: "/blog",
+    text: "blog",
   },
   {
-    path: "/contact",
-    text: "contact",
+    path: "/contacto",
+    text: "contacto",
+  },
+  {
+    path: "/servicios",
+    text: "servicios",
   },
 ]

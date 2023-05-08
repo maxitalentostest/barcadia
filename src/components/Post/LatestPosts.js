@@ -28,7 +28,7 @@ const LatestPosts = ({ title, introduction }) => {
           })}
         </PostItems>
         <div className="learn__more">
-          <Button text="All News Items" as={Link} to="/news" />
+          <Button text="Ver todos" as={Link} to="/autores" />
         </div>
       </div>
     </div>

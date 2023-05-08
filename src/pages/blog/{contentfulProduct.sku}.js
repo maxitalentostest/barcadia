@@ -37,13 +37,6 @@ export const data = graphql`
           raw
         }
       }
-      gallery {
-        gatsbyImageData(
-          width: 1000
-          placeholder: BLURRED
-          formats: [AUTO, WEBP, AVIF]
-        )
-      }
     }
   }
 `

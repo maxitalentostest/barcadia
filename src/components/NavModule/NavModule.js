@@ -163,14 +163,14 @@ const NavModule = () => {
               </Link>
             </li>
           ))}
-          {featuredProduct && (
+          {/* {featuredProduct && (
             <li className={subNavIsOpen ? "open" : "closed"}>
               <button
                 type="button"
                 onClick={toggleSubNav}
                 onKeyDown={toggleSubNav}
               >
-                Products<span>.</span>
+                Servicios<span>.</span>
                 <Chevron />
               </button>
 
@@ -183,7 +183,7 @@ const NavModule = () => {
                   <Link
                     onClick={toggleNav}
                     onKeyDown={toggleNav}
-                    to="/products"
+                    to="/servicios"
                   >
                     All Products<span>.</span>
                   </Link>
@@ -206,7 +206,7 @@ const NavModule = () => {
                 })}
               </SubNavStyles>
             </li>
-          )}
+          )} */}
         </NavTopLevel>
       </motion.div>
     </NavModuleStyles>

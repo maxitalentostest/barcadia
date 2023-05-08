@@ -12,14 +12,12 @@ const PostTemplate = (contentfulPost) => {
       <section>
         <PostSingleStyles>
           {title && <h1 className="blogsingle__title">{title}</h1>}
-          {createdAt && (
-            <p className="blogsingle__date">Posted on {createdAt}</p>
-          )}
+          {false && <p className="blogsingle__date">Posted on {createdAt}</p>}
           {content && (
             <article className="blogsingle__content">
               <RichText richText={content} />
               <div className="blogsingle__back">
-                <Button to="/news" text="Back to news" as={Link} />
+                <Button to="/autores" text="Ver todos los autores" as={Link} />
               </div>
             </article>
           )}

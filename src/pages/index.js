@@ -11,30 +11,27 @@ import LatestPosts from "../components/Post/LatestPosts"
 const Index = () => {
   return (
     <>
-      <Seo title="Home" />
+      <Seo title="Inicio" />
       <Layout>
         <BannerModule
-          title="Welcome to Barcadia"
-          subTitle="Using a combination of Gatsby and Contentful, Barcadia is ready to deploy and simple to use."
+          title="MaxiTalentos"
+          subTitle="Consultoría en Recursos Humanos."
         />
         <BasicTextModule
-          title="A super-fast theme that is easy to get started, using the power of
-            GatsbyJS"
-          content="Using modern CSS properties such as grid, this theme is optmised for
-            speed and mobile devices. Giving users an excellent experience on
-            any device. Future-proofing your product."
-          link="/products"
-          linkText="View Products"
+          title="Nuestros Servicios"
+          content="Somos una empresa dedicada a la consultoría de Recursos Humanos. Ofrecemos servicios con la finalidad de maximizar el talento de las personas y organizaciones."
+          link="/servicios"
+          linkText="Servicios"
         />
         <PerksModule>
           <Perk title="The Title" content="The content" />
         </PerksModule>
         <Features
-          title="Featured Products from Barcadia."
-          introduction="Vivamus quam mauris, pulvinar vel mauris id, interdum semper neque. Proin malesuada libero eget tellus scelerisque, id egestas tortor egestas."
+          title="Blog."
+          introduction="A continuación te presentamos los artículos más recientes de nuestro blog."
         />
         <LatestPosts
-          title="The Latest from Barcadia"
+          title="Autores"
           introduction="Cras scelerisque, tellus sed gravida tincidunt, velit tellus blandit justo, nec viverra augue erat in erat. Maecenas iaculis sed purus non fringilla."
         />
       </Layout>
