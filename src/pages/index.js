@@ -30,10 +30,7 @@ const Index = () => {
           title="Blog."
           introduction="A continuación te presentamos los artículos más recientes de nuestro blog."
         />
-        <LatestPosts
-          title="Autores"
-          introduction="Cras scelerisque, tellus sed gravida tincidunt, velit tellus blandit justo, nec viverra augue erat in erat. Maecenas iaculis sed purus non fringilla."
-        />
+        <LatestPosts title="Autores" introduction="" />
       </Layout>
     </>
   )
