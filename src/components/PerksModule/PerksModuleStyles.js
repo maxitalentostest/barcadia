@@ -4,6 +4,26 @@ export const PerksModuleStyles = styled.section`
   background-color: #000;
   position: relative;
 
+  .perks__titles {
+    font-size: 2rem;
+    flex-direction: column;
+
+    & > svg {
+      max-width: 64px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .perks__titles {
+      font-size: 2.8rem;
+      flex-direction: row;
+
+      & > svg {
+        max-width: 64px;
+      }
+    }
+  }
+
   .perks__image--bg,
   .perks__image--overlay {
     position: absolute;

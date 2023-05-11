@@ -22,13 +22,12 @@ const PerksModule = () => {
           content="Colaboramos en equipo con tu organización para fortalecer la administración del Capital Humano."
         >
           <div
+            className="perks__titles"
             style={{
               display: "flex",
-              justifyContent: "center",
               alignItems: "center",
               fontFamily: "Share Tech Mono",
               fontWeight: 600,
-              fontSize: "2.8rem",
               letterSpacing: "-2px",
               wordSpacing: "-8px",
               marginBottom: "16px",
@@ -52,13 +51,12 @@ const PerksModule = () => {
           content="Ayudamos a encontrar los candidatos idóneos para cubrir las vacantes dentro de su organización."
         >
           <div
+            className="perks__titles"
             style={{
               display: "flex",
-              justifyContent: "center",
               alignItems: "center",
               fontFamily: "Share Tech Mono",
               fontWeight: 600,
-              fontSize: "2.8rem",
               letterSpacing: "-2px",
               wordSpacing: "-8px",
               marginBottom: "16px",
