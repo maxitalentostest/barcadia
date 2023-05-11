@@ -19,7 +19,7 @@ export const PerksModuleStyles = styled.section`
       flex-direction: row;
 
       & > svg {
-        max-width: 64px;
+        max-width: 76px;
       }
     }
   }
