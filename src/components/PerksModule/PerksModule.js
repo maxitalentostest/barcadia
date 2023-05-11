@@ -25,6 +25,7 @@ const PerksModule = () => {
             className="perks__titles"
             style={{
               display: "flex",
+              justifyContent: "center",
               alignItems: "center",
               fontFamily: "Share Tech Mono",
               fontWeight: 600,
@@ -54,6 +55,7 @@ const PerksModule = () => {
             className="perks__titles"
             style={{
               display: "flex",
+              justifyContent: "center",
               alignItems: "center",
               fontFamily: "Share Tech Mono",
               fontWeight: 600,
