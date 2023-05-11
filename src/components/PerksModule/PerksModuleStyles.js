@@ -51,7 +51,7 @@ export const PerksModuleStyles = styled.section`
     }
 
     @media (min-width: 1200px) {
-      gap: calc(var(--gap) * 4);
+      gap: calc(var(--gap) * 3);
     }
   }
 `
@@ -69,10 +69,11 @@ export const PerkStyles = styled.aside`
   }
 
   @media (min-width: 1024px) {
-    max-width: 400px;
+    max-width: 420px;
   }
 
   h3 {
+    font-size: 26px;
     display: inline-block;
     border-bottom: 2px solid rgba(255, 255, 255, 0.15);
   }

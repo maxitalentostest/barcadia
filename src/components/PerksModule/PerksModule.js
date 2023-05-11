@@ -3,6 +3,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { PerksModuleStyles } from "./PerksModuleStyles"
 import { MdOutlineClose as Cross } from "react-icons/md"
 import Perk from "./Perk"
+import { FcBusinessContact, FcStatistics } from "react-icons/fc"
 
 const PerksModule = () => {
   return (
@@ -17,29 +18,61 @@ const PerksModule = () => {
       <div className="perks__image--overlay"></div>
       <div className="container container__tight">
         <Perk
-          title="Built For Speed"
-          content="By using GatsbyJS, the Barcadia site is super-fast out of the box"
+          title="Recursos Humanos"
+          content="Colaboramos en equipo con tu organización para fortalecer la administración del Capital Humano."
         >
-          <StaticImage
-            src="../../../static/logos/gatsby-logo.svg"
-            alt="Perk Image"
-            layout="constrained"
-            placeholder="tracedSVG"
-          />
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              fontFamily: "Share Tech Mono",
+              fontWeight: 600,
+              fontSize: "2.8rem",
+              letterSpacing: "-2px",
+              wordSpacing: "-8px",
+              marginBottom: "16px",
+            }}
+          >
+            <FcStatistics
+              style={{
+                width: "76px",
+                height: "76px",
+                padding: "0 10px 0 0",
+              }}
+            />
+            Consultoría
+          </div>
         </Perk>
         <span className="perks__divider">
           <Cross />
         </span>
         <Perk
-          title="Built For Content"
-          content="Contentful helps you edit your application with ease as your business expands"
+          title="Enlace: candidato - empresa"
+          content="Ayudamos a encontrar los candidatos idóneos para cubrir las vacantes dentro de su organización."
         >
-          <StaticImage
-            src="../../../static/logos/contentful-logo.svg"
-            alt="Perk Image"
-            layout="constrained"
-            placeholder="tracedSVG"
-          />
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              fontFamily: "Share Tech Mono",
+              fontWeight: 600,
+              fontSize: "2.8rem",
+              letterSpacing: "-2px",
+              wordSpacing: "-8px",
+              marginBottom: "16px",
+            }}
+          >
+            <FcBusinessContact
+              style={{
+                width: "76px",
+                height: "76px",
+                padding: "0 10px 0 0",
+              }}
+            />
+            Bolsa de Trabajo
+          </div>
         </Perk>
       </div>
     </PerksModuleStyles>
