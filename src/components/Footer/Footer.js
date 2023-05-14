@@ -101,7 +101,7 @@ const Footer = () => {
               {siteMeta.linkedinUsername && (
                 <li>
                   <a
-                    href={`https://www.linkedin.com/in/${siteMeta.linkedinUsername}`}
+                    href={`https://mx.linkedin.com/company/maxitalentos-mx`}
                     target="_blank"
                     rel="nofollow noreferrer noopener"
                   >
