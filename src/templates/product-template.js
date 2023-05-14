@@ -100,7 +100,7 @@ const Producttemplate = (contentfulProduct) => {
               <RichText richText={description} />
             </div>
           )}
-          {faqs && (
+          {/* {faqs && (
             <div className="column">
               {faqs.map((item, index) => {
                 return (
@@ -112,7 +112,7 @@ const Producttemplate = (contentfulProduct) => {
                 )
               })}
             </div>
-          )}
+          )} */}
         </div>
       </ProductTemplateStyles>
       {gallery && (
