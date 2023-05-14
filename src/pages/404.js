@@ -11,13 +11,13 @@ const error = () => {
       <Layout>
         <div className="section">
           <div className="container container__tight">
-            <h1>Sorry.</h1>
-            <h3>This page has moved or no longer exists.</h3>
+            <h1>Lo sentimos.</h1>
+            <h3>La página que esta buscando no existe.</h3>
             <p>
-              Please choose another option from the menu above, or to return
-              home, press the button below.
+              Puede visitar otras páginas del sitio usando el menú de navegación
+              o bien ir a la página de inicio dando clic en el siguiente botón.
             </p>
-            <Button text="Return Home" to="/" as={Link} />
+            <Button text="Ir al Inicio" to="/" as={Link} />
           </div>
         </div>
       </Layout>

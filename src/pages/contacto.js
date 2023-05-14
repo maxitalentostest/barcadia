@@ -8,7 +8,7 @@ import SimpleBanner from "../components/SimpleBanner/SimpleBanner"
 const contact = () => {
   return (
     <>
-      <Seo title="Contact" />
+      <Seo title="Contacto" />
       <Layout>
         <SimpleBanner title="Envíanos un mensaje">
           <StaticImage
