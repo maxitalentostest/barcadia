@@ -4,12 +4,12 @@ import PostTemplate from "../../templates/post-template"
 import Seo from "../../components/SEO"
 import Layout from "../../components/Layout"
 
-const Post = ({ data: { contentfulPost } }) => {
+const Post = ({ data: { contentfulAuthor } }) => {
   return (
     <>
-      <Seo title={contentfulPost.title} />
+      <Seo title={contentfulAuthor.title} />
       <Layout>
-        <PostTemplate {...contentfulPost} />
+        <PostTemplate {...contentfulAuthor} />
       </Layout>
     </>
   )
@@ -17,7 +17,7 @@ const Post = ({ data: { contentfulPost } }) => {
 
 export const data = graphql`
   query postQuery($id: String) {
-    contentfulPost(id: { eq: $id }) {
+    contentfulAuthor(id: { eq: $id }) {
       title
       introduction
       content {

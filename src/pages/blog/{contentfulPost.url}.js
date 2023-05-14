@@ -4,12 +4,12 @@ import ProductTemplate from "../../templates/product-template"
 import Seo from "../../components/SEO"
 import Layout from "../../components/Layout"
 
-const Product = ({ data: { contentfulProduct } }) => {
+const Product = ({ data: { contentfulPost } }) => {
   return (
     <>
-      <Seo title={contentfulProduct.title} />
+      <Seo title={contentfulPost.title} />
       <Layout>
-        <ProductTemplate {...contentfulProduct} />
+        <ProductTemplate {...contentfulPost} />
       </Layout>
     </>
   )
@@ -17,7 +17,7 @@ const Product = ({ data: { contentfulProduct } }) => {
 
 export const data = graphql`
   query productQuery($id: String) {
-    contentfulProduct(id: { eq: $id }) {
+    contentfulPost(id: { eq: $id }) {
       title
       introduction
       price
@@ -30,12 +30,6 @@ export const data = graphql`
       }
       description {
         raw
-      }
-      faqs {
-        question
-        answer {
-          raw
-        }
       }
     }
   }

@@ -23,7 +23,7 @@ const PostTemplate = (contentfulPost) => {
           )}
         </PostSingleStyles>
       </section>
-      <LatestPosts title="Further reading from Barcadia" />
+      <LatestPosts title="Otros autores en MaxiTalentos" />
     </>
   )
 }

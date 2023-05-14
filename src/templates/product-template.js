@@ -125,10 +125,7 @@ const Producttemplate = (contentfulProduct) => {
           </div>
         </ProductGallery>
       )}
-      <Features
-        title="Artículos Relacionados."
-        introduction="Vivamus quam mauris, pulvinar vel mauris id, interdum semper neque. Proin malesuada libero eget tellus scelerisque, id egestas tortor egestas."
-      />
+      <Features title="Artículos Relacionados." introduction="" />
     </>
   )
 }

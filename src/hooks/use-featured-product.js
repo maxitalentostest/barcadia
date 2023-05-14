@@ -2,16 +2,16 @@ import { graphql, useStaticQuery } from "gatsby"
 
 const useFeaturedProduct = () => {
   const {
-    allContentfulProduct: { nodes },
+    allContentfulPost: { nodes },
   } = useStaticQuery(graphql`
     query featuredProductLinksQuery {
-      allContentfulProduct(
+      allContentfulPost(
         filter: { featureThisProduct: { eq: true } }
         sort: { fields: url }
       ) {
         nodes {
           title
-          gatsbyPath(filePath: "/blog/{contentfulProduct.url}")
+          gatsbyPath(filePath: "/blog/{contentfulPost.url}")
           featureThisProduct
           introduction
           headerImage {
