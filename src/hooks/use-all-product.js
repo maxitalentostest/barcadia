@@ -8,7 +8,7 @@ const useAllProduct = () => {
       allContentfulProduct(sort: { fields: createdAt, order: DESC }) {
         nodes {
           title
-          gatsbyPath(filePath: "/blog/{contentfulProduct.sku}")
+          gatsbyPath(filePath: "/blog/{contentfulProduct.url}")
           introduction
           sku
           price
