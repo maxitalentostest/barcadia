@@ -49,7 +49,7 @@ const NavModule = () => {
             initial="closed"
             animate={isOpen ? "open" : "closed"}
             onClick={toggleNav}
-            onKeyDown={toggleNav}
+            // onKeyDown={toggleNav}
             aria-label={isOpen ? "Close Menu" : "Open Menu"}
             className={isOpen ? " open" : ""}
           >
