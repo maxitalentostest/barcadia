@@ -134,7 +134,7 @@ h6 {
 
 p {
     margin-top: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     color: var(--bodyColor);
 }
 
@@ -156,7 +156,6 @@ i {
 
 hr,
 ol,
-ul,
 blockquote {
   margin-top: calc(var(--sectionMargin) / 2);
   margin-bottom: calc(var(--sectionMargin) / 2);
