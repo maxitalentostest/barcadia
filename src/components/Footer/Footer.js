@@ -79,7 +79,7 @@ const Footer = () => {
               {siteMeta.facebookUsername && (
                 <li>
                   <a
-                    href={`https://www.facebook.com/${siteMeta.facebookUsername}`}
+                    href={`https://www.facebook.com/profile.php?id=100093533521048&sk=photos`}
                     target="_blank"
                     rel="nofollow noreferrer noopener"
                   >
