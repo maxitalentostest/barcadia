@@ -19,4 +19,8 @@ export const menuItems = [
     path: "/servicios",
     text: "servicios",
   },
+  {
+    path: "/recursos",
+    text: "recursos",
+  },
 ]

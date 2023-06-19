@@ -5,6 +5,7 @@ import Seo from "../components/SEO"
 import SimpleBanner from "../components/SimpleBanner/SimpleBanner"
 import ProductFeed from "../components/Feeds/ProductFeed"
 import PostFeed from "../components/Feeds/PostFeed"
+import ResourceFeed from "../components/Feeds/Resource"
 
 const getTemplate = (contentfulPage) => {
   const { feedType } = contentfulPage
@@ -12,6 +13,9 @@ const getTemplate = (contentfulPage) => {
   switch (feedType) {
     case "Products":
       return <ProductFeed {...contentfulPage} />
+
+    case "Resources":
+      return <ResourceFeed {...contentfulPage} />
 
     default:
       return <PostFeed {...contentfulPage} />

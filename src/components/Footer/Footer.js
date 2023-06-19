@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { menuItems } from "../../constants/links"
 import { FooterStyles, FooterMenuStyles, CopyrightStyles } from "./FooterStyles"
 import useAllProduct from "../../hooks/use-all-product"
+import useAllResource from "../../hooks/use-all-resource"
 import { UseSiteMetadata } from "../../hooks/useSiteMetadata"
 import {
   FaFacebookSquare as Facebook,
@@ -12,7 +13,7 @@ import {
 } from "react-icons/fa"
 
 const Footer = () => {
-  const allProduct = useAllProduct()
+  const allResource = useAllResource()
   const siteMeta = UseSiteMetadata()
   return (
     <FooterStyles style={{ marginBottom: 0 }} className="section">
@@ -32,15 +33,15 @@ const Footer = () => {
             })}
           </ul>
         </FooterMenuStyles>
-        {allProduct.length > 0 && (
+        {allResource.length > 0 && (
           <FooterMenuStyles className="footer__menu products__menu">
             <h5>
-              <Link to="/servicios">
-                Servicios<span>.</span>
+              <Link to="/recursos">
+                Recursos<span>.</span>
               </Link>
             </h5>
             <ul>
-              {allProduct.map((item, index) => {
+              {allResource.map((item, index) => {
                 const { gatsbyPath, title } = item
 
                 return (
