@@ -119,13 +119,13 @@ const Footer = () => {
       <CopyrightStyles>
         <div className="container container__tight">
           <p>
-            Designed & developed by{" "}
+            Developed by{" "}
             <a
-              href={siteMeta.developerUrl}
+              href="https://github.com/mendezjose"
               target="_blank"
               rel="noopener noreferrer"
             >
-              {siteMeta.developerName}
+              Jose Mendez
             </a>
             <span>.</span>
           </p>
