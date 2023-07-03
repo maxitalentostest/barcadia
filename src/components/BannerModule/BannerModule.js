@@ -30,22 +30,22 @@ const BannerModule = ({ children, title, subTitle, price, enquire }) => {
               </h1>
             )}
             {subTitle && <h2>{subTitle}</h2>}
-            {price && (
+            {/* {price && (
               <h2 className="price">
                 £{price}
                 <span style={{ color: "var(--primary)" }}>.</span>
               </h2>
-            )}
+            )} */}
             <div className="banner__btns">
-              {enquire && (
+              {/* {enquire && (
                 <Button
                   className="btn"
                   text="Enquire Now"
                   as={Link}
                   to="/contact"
                 />
-              )}
-              <Button as={Link} to="/acerca" text="Leer más" />
+              )} */}
+              <Button as={Link} to="#topContent" text="Leer más" />
             </div>
           </div>
         </div>
