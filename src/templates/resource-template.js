@@ -38,6 +38,14 @@ const ProductTemplateStyles = styled.div`
         }
       }
     }
+    .thumbnail {
+      width: 100% !important;
+      margin: 0 auto;
+
+      @media (min-width: 768px) {
+        width: 50% !important;
+      }
+    }
   }
 `
 
@@ -77,10 +85,11 @@ const ResourceTemplate = (contentfulProduct) => {
     faqs,
     gallery,
     file,
+    thumbnail,
   } = contentfulProduct
   const productHeaderImage = getImage(headerImage)
+  const thumbnailImage = getImage(thumbnail)
 
-  console.log(contentfulProduct)
   return (
     <>
       <Seo title={title} />
@@ -117,6 +126,17 @@ const ResourceTemplate = (contentfulProduct) => {
               })}
             </div>
           )} */}
+          {thumbnail && (
+            <div className="column">
+              <div className="thumbnail">
+                <GatsbyImage
+                  className="banner__image"
+                  image={thumbnailImage}
+                  alt={title}
+                />
+              </div>
+            </div>
+          )}
         </div>
       </ProductTemplateStyles>
       {gallery && (

@@ -11,7 +11,7 @@ const useAllProduct = () => {
           gatsbyPath(filePath: "/recursos/{contentfulResource.url}")
           introduction
           sku
-          price
+
           description {
             raw
           }

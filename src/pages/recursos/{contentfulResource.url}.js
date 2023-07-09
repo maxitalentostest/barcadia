@@ -20,8 +20,15 @@ export const data = graphql`
     contentfulResource(id: { eq: $id }) {
       title
       introduction
-      price
+
       headerImage {
+        gatsbyImageData(
+          width: 2000
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+      thumbnail {
         gatsbyImageData(
           width: 2000
           placeholder: BLURRED
