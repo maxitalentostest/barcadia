@@ -30,6 +30,11 @@ export const data = graphql`
       }
       description {
         raw
+        references {
+          __typename
+          contentful_id
+          url
+        }
       }
     }
   }
