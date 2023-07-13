@@ -5,7 +5,7 @@ import { ContactStyles } from "./ContactStyles"
 const Contact = () => {
   return (
     <ContactStyles className="section">
-      <form name="contact" data-netlify="true">
+      <form name="contact" netlify-honeypot="bot-field" data-netlify="true">
         <input placeholder="Nombre..." type="text" name="name" />
         <input placeholder="Email..." type="email" name="email" />
         <textarea placeholder="Mensaje..." name="message" rows="5"></textarea>
