@@ -6,6 +6,7 @@ const Contact = () => {
   return (
     <ContactStyles className="section">
       <form name="contact" netlify-honeypot="bot-field" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" />
         <input id="name" placeholder="Nombre..." type="text" name="name" />
         <input id="email" placeholder="Email..." type="email" name="email" />
         <textarea
