@@ -121,7 +121,7 @@ const Footer = () => {
           <p>
             Developed by{" "}
             <a
-              href="https://github.com/mendezjose"
+              href="https://www.linkedin.com/in/jose-a-mendez-hdz/"
               target="_blank"
               rel="noopener noreferrer"
             >
