@@ -7,7 +7,7 @@ const useFeaturedProduct = () => {
     query featuredProductLinksQuery {
       allContentfulPost(
         filter: { featureThisProduct: { eq: true } }
-        sort: { fields: url }
+        sort: { order: DESC, fields: createdAt }
       ) {
         nodes {
           title
