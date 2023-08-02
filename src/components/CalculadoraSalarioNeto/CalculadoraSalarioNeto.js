@@ -23,6 +23,7 @@ const Contact = () => {
     getValues,
     setError,
     clearErrors,
+    setValue,
     formState: { errors },
   } = useForm()
 
@@ -85,7 +86,10 @@ const Contact = () => {
 
   const onSubmit = () => {
     clearErrors()
+    setImss(0)
+    setSubsidio(0)
     const data = getValues()
+    console.log(data)
 
     if (!data.currency) {
       setError("currency", { type: "focus", message: `El sueldo bruto es requerido.` }, { shouldFocus: true })
@@ -163,8 +167,8 @@ const Contact = () => {
     if (data.subsidio) net = net + subsidioCalc
     const sueldoNetoCalc = truncateDecimals(net)
 
-    if (data.imss) setSubsidio(subsidioCalc)
-    if (data.subsidio) setImss(imssCalc)
+    if (data.subsidio) setSubsidio(subsidioCalc)
+    if (data.imss) setImss(imssCalc)
     setLimite(limiteInferiorCalc)
     setCuota(cuotaFijaCalc)
     setExcedente(excedenteCalc)
