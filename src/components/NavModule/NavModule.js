@@ -1,35 +1,36 @@
-import React, { useContext, useState } from "react"
+import React, { useContext, useState, useEffect } from "react"
 import { Link } from "gatsby"
 import MenuContext from "../MenuContext"
 import { motion } from "framer-motion"
 import { menuItems } from "./NavConstants"
 import { UseSiteMetadata } from "../../hooks/useSiteMetadata"
-import useFeaturedProduct from "../../hooks/use-featured-product"
-import { FiChevronDown as Chevron } from "react-icons/fi"
-import {
-  NavModuleStyles,
-  NavTopLevel,
-  SubNavStyles,
-  HamburgerStyles,
-  LogoStyles,
-} from "./NavModuleStyles"
-import {
-  barOneVariants,
-  barTwoVariants,
-  barThreeVariants,
-  menuList,
-  subMenuNavVariants,
-} from "./NavAnim"
-import styled from "styled-components"
-import { StaticImage } from "gatsby-plugin-image"
+// import useFeaturedProduct from "../../hooks/use-featured-product"
+// import { FiChevronDown as Chevron } from "react-icons/fi"
+import { NavModuleStyles, NavTopLevel, SubNavStyles, HamburgerStyles, LogoStyles } from "./NavModuleStyles"
+import { barOneVariants, barTwoVariants, barThreeVariants, menuList, subMenuNavVariants } from "./NavAnim"
+// import styled from "styled-components"
+// import { StaticImage } from "gatsby-plugin-image"
 
-const StyledImg = styled.img``
+// const StyledImg = styled.img``
 
 const NavModule = () => {
-  const featuredProduct = useFeaturedProduct()
+  // const featuredProduct = useFeaturedProduct()
 
   const [isOpen, setNav] = useContext(MenuContext)
   const [subNavIsOpen, setSubNav] = useState(false)
+  const [scrollTop, setScrollTop] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = (event) => {
+      setScrollTop(window.scrollY)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   const toggleNav = () => {
     setNav((isOpen) => !isOpen)
@@ -43,7 +44,7 @@ const NavModule = () => {
 
   return (
     <NavModuleStyles>
-      <div className="nav">
+      <div className={`nav ${scrollTop > 80 ? "pt20" : ""}`}>
         <div className="container">
           <HamburgerStyles
             initial="closed"
@@ -53,18 +54,9 @@ const NavModule = () => {
             aria-label={isOpen ? "Close Menu" : "Open Menu"}
             className={isOpen ? " open" : ""}
           >
-            <motion.span
-              className="bar"
-              variants={barOneVariants}
-            ></motion.span>
-            <motion.span
-              className="bar"
-              variants={barTwoVariants}
-            ></motion.span>
-            <motion.span
-              className="bar"
-              variants={barThreeVariants}
-            ></motion.span>
+            <motion.span className="bar" variants={barOneVariants}></motion.span>
+            <motion.span className="bar" variants={barTwoVariants}></motion.span>
+            <motion.span className="bar" variants={barThreeVariants}></motion.span>
           </HamburgerStyles>
 
           {title && (
@@ -75,64 +67,25 @@ const NavModule = () => {
 
                 {/* <StyledImg src="/logo.svg" /> */}
                 <div
+                  className={`${scrollTop > 80 ? "shrink" : ""}`}
                   style={{
                     width: "192.5px",
                     height: "87.5px",
                     fontFamily: "Share Tech Mono",
                     fontSize: "17px",
                     marginRight: "50px",
+                    transition: "0.4s",
                   }}
                 >
                   {/* <StaticImage src="../logo.svg" /> */}
                   <svg width="100%" height="100%" viewBox="0 0 110 50">
-                    <line
-                      x1="43"
-                      y1="2"
-                      x2="43"
-                      y2="12"
-                      style={{ stroke: "#6fdde0", strokeWidth: "0.6" }}
-                    />
-                    <line
-                      x1="43"
-                      y1="38"
-                      x2="43"
-                      y2="48"
-                      style={{ stroke: "#6fdde0", strokeWidth: "0.6" }}
-                    />
-                    <line
-                      x1="43"
-                      y1="48"
-                      x2="73"
-                      y2="48"
-                      style={{ stroke: "#6fdde0", strokeWidth: "0.6" }}
-                    />
-                    <line
-                      x1="43"
-                      y1="2"
-                      x2="73"
-                      y2="2"
-                      style={{ stroke: "#6fdde0", strokeWidth: "0.6" }}
-                    />
-                    <line
-                      x1="73"
-                      y1="2"
-                      x2="73"
-                      y2="12"
-                      style={{ stroke: "#6fdde0", strokeWidth: "0.6" }}
-                    />
-                    <line
-                      x1="73"
-                      y1="38"
-                      x2="73"
-                      y2="48"
-                      style={{ stroke: "#6fdde0", strokeWidth: "0.6" }}
-                    />
-                    <text
-                      font-family="Share Tech Mono"
-                      x="4"
-                      y="30"
-                      fill="#fff"
-                    >
+                    <line x1="43" y1="2" x2="43" y2="12" style={{ stroke: "#6fdde0", strokeWidth: "0.6" }} />
+                    <line x1="43" y1="38" x2="43" y2="48" style={{ stroke: "#6fdde0", strokeWidth: "0.6" }} />
+                    <line x1="43" y1="48" x2="73" y2="48" style={{ stroke: "#6fdde0", strokeWidth: "0.6" }} />
+                    <line x1="43" y1="2" x2="73" y2="2" style={{ stroke: "#6fdde0", strokeWidth: "0.6" }} />
+                    <line x1="73" y1="2" x2="73" y2="12" style={{ stroke: "#6fdde0", strokeWidth: "0.6" }} />
+                    <line x1="73" y1="38" x2="73" y2="48" style={{ stroke: "#6fdde0", strokeWidth: "0.6" }} />
+                    <text font-family="Share Tech Mono" x="4" y="30" fill="#fff">
                       MaxiTalentos
                     </text>
                   </svg>
@@ -142,22 +95,11 @@ const NavModule = () => {
           )}
         </div>
       </div>
-      <motion.div
-        initial="closed"
-        animate={isOpen ? "open" : "closed"}
-        variants={menuList}
-        transition={{ type: "ease", stiffness: 50, velocity: 50 }}
-        className="menu"
-      >
+      <motion.div initial="closed" animate={isOpen ? "open" : "closed"} variants={menuList} transition={{ type: "ease", stiffness: 50, velocity: 50 }} className="menu">
         <NavTopLevel>
           {menuItems.map((item, index) => (
             <li key={index}>
-              <Link
-                onClick={toggleNav}
-                onKeyDown={toggleNav}
-                to={item.path}
-                activeClassName="menu__item--active"
-              >
+              <Link onClick={toggleNav} onKeyDown={toggleNav} to={item.path} activeClassName="menu__item--active">
                 {item.text}
                 <span>.</span>
               </Link>

@@ -9,6 +9,7 @@ export const NavModuleStyles = styled.nav`
     width: 100%;
     z-index: 100;
     padding: 20px var(--borderSpacing) 0 var(--borderSpacing);
+    transition: 0.4s;
 
     @media (min-width: 1024px) {
       padding-top: 50px;
@@ -16,6 +17,12 @@ export const NavModuleStyles = styled.nav`
 
     @media (min-width: 1440px) {
       padding-top: 40px;
+    }
+  }
+
+  .pt20 {
+    @media (min-width: 768px) {
+      padding-top: 20px !important;
     }
   }
 
@@ -183,6 +190,12 @@ export const LogoStyles = styled.div`
   &:focus {
     a {
       color: var(--primary);
+    }
+  }
+
+  .shrink {
+    @media (min-width: 768px) {
+      height: 60px !important;
     }
   }
 `
