@@ -1,5 +1,4 @@
-import React, { useState } from "react"
-import Button from "../Button/Button"
+import React, { useEffect, useState } from "react"
 import { CalculadoraSalarioNetoStyles } from "./CalculadoraSalarioNetoStyles"
 import { useForm, Controller } from "react-hook-form"
 import { NumericFormat } from "react-number-format"
@@ -8,31 +7,22 @@ import { navigate } from "gatsby"
 
 const Contact = () => {
   const [periodo, setPeriodo] = React.useState(2)
-
   const [limite, setLimite] = useState(0)
   const [excedente, setExcedente] = useState(0)
   const [porcentaje, setPorcentaje] = useState(0)
   const [marginal, setMarginal] = useState(0)
   const [cuota, setCuota] = useState(0)
-  const [isr, setIsr] = useState(0)
   const [imss, setImss] = useState(0)
   const [subsidio, setSubsidio] = useState(0)
   const [final, setFinal] = useState(0)
-  const [diario, setDiario] = useState(0)
-  const [dias, setDias] = useState(0)
-  const [sbc, setSbc] = useState(0)
-  const [sdi, setSdi] = useState(0)
   const [sueldoNeto, setSueldoNeto] = useState(0)
 
   const {
-    trigger,
     control,
-    watch,
-    handleSubmit,
     register,
-    setValue,
     getValues,
     setError,
+    clearErrors,
     formState: { errors },
   } = useForm()
 
@@ -94,6 +84,7 @@ const Contact = () => {
   const diasDelPeriodo = [7, 15, 30]
 
   const onSubmit = () => {
+    clearErrors()
     const data = getValues()
 
     if (!data.currency) {
@@ -172,8 +163,8 @@ const Contact = () => {
     if (data.subsidio) net = net + subsidioCalc
     const sueldoNetoCalc = truncateDecimals(net)
 
-    setSubsidio(subsidioCalc)
-    setImss(imssCalc)
+    if (data.imss) setSubsidio(subsidioCalc)
+    if (data.subsidio) setImss(imssCalc)
     setLimite(limiteInferiorCalc)
     setCuota(cuotaFijaCalc)
     setExcedente(excedenteCalc)
@@ -253,14 +244,14 @@ const Contact = () => {
           <div>
             <label>
               Incluir IMSS
-              <input className="check" type="checkbox" id="imss" {...register("imss", { shouldUnregister: true })} />
+              <input className="check" type="checkbox" id="imss" {...register("imss", { shouldUnregister: true, onChange: (e) => onSubmit() })} />
               <span className="checkmark"></span>
             </label>
           </div>
           <div>
             <label>
               Incluir subsidio de empleado
-              <input className="check" type="checkbox" id="subsidio" {...register("subsidio", { shouldUnregister: true })} />
+              <input className="check" type="checkbox" id="subsidio" {...register("subsidio", { shouldUnregister: true, onChange: (e) => onSubmit() })} />
               <span className="checkmark"></span>
             </label>
           </div>
