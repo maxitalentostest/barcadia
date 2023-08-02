@@ -1,7 +1,7 @@
 import * as React from "react"
 import { SimpleBannerStyles } from "./SimpleBannerStyles"
 
-const SimpleBanner = ({ children, title }) => {
+const SimpleBanner = ({ children, title, subtitle }) => {
   return (
     <SimpleBannerStyles>
       {children}
@@ -13,6 +13,7 @@ const SimpleBanner = ({ children, title }) => {
               {title}
               <span style={{ color: "var(--primary)" }}>.</span>
             </h1>
+            {subtitle && <p>{subtitle}</p>}
           </div>
         </div>
       )}
