@@ -89,7 +89,6 @@ const Contact = () => {
     setImss(0)
     setSubsidio(0)
     const data = getValues()
-    console.log(data)
 
     if (!data.currency) {
       setError("currency", { type: "focus", message: `El sueldo bruto es requerido.` }, { shouldFocus: true })
@@ -248,14 +247,34 @@ const Contact = () => {
           <div>
             <label>
               Incluir IMSS
-              <input className="check" type="checkbox" id="imss" {...register("imss", { shouldUnregister: true, onChange: (e) => onSubmit() })} />
+              <input
+                className="check"
+                type="checkbox"
+                id="imss"
+                {...register("imss", {
+                  shouldUnregister: true,
+                  onChange: (e) => {
+                    if (sueldoNeto) onSubmit()
+                  },
+                })}
+              />
               <span className="checkmark"></span>
             </label>
           </div>
           <div>
             <label>
               Incluir subsidio de empleado
-              <input className="check" type="checkbox" id="subsidio" {...register("subsidio", { shouldUnregister: true, onChange: (e) => onSubmit() })} />
+              <input
+                className="check"
+                type="checkbox"
+                id="subsidio"
+                {...register("subsidio", {
+                  shouldUnregister: true,
+                  onChange: (e) => {
+                    if (sueldoNeto) onSubmit()
+                  },
+                })}
+              />
               <span className="checkmark"></span>
             </label>
           </div>
