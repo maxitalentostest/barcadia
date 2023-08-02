@@ -169,7 +169,7 @@ const Contact = () => {
     let net = sueldoEntrada - finalCalc
 
     if (data.imss) net = net - imssCalc
-    if (data.subsidio) net = net - subsidioCalc
+    if (data.subsidio) net = net + subsidioCalc
     const sueldoNetoCalc = truncateDecimals(net)
 
     setSubsidio(subsidioCalc)
@@ -319,7 +319,7 @@ const Contact = () => {
                   selector: (row) => row.cantidad,
                 },
               ]}
-              data={[{ concepto: "Sueldo Neto", cantidad: `$ ${sueldoNeto}` }]}
+              data={[{ concepto: "Sueldo Neto", cantidad: `$ ${sueldoNeto} MXN` }]}
             />
             <DataTable
               className="results2"
@@ -337,7 +337,7 @@ const Contact = () => {
                   selector: (row) => row.cantidad,
                 },
               ]}
-              data={[{ concepto: "Sueldo Neto", cantidad: `$ ${sueldoNeto} MXN` }]}
+              data={[{ concepto: "Sueldo Neto", cantidad: `$ ${sueldoNeto}` }]}
             />
           </div>
           <div style={{ marginTop: "1.5rem", fontSize: ".75rem" }}>
