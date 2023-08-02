@@ -23,7 +23,6 @@ const Contact = () => {
     getValues,
     setError,
     clearErrors,
-    setValue,
     formState: { errors },
   } = useForm()
 
@@ -37,6 +36,8 @@ const Contact = () => {
     setMarginal(0)
     setFinal(0)
     setSueldoNeto(0)
+    setImss(0)
+    setSubsidio(0)
   }
 
   const imssCalculator = function (e) {
