@@ -9,7 +9,7 @@ import SimpleBanner from "../components/SimpleBanner/SimpleBanner"
 const Calculadora = () => {
   return (
     <>
-      <Seo title="Calculadora de Salario Neto" />
+      <Seo title="Calculadora de Sueldo Neto" />
       <Layout>
         <SimpleBanner title="Calculadora de Sueldo Neto" subtitle="¡Usa esta calculadora para calcular el salario neto o bruto de un empleado!">
           <StaticImage className="banner__image" src="../../static/sueldo-neto-calculadora.jpg" alt="Calculadora sueldo neto" />
