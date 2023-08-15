@@ -21,6 +21,7 @@ const Index = () => {
           content="Somos una empresa dedicada a la consultoría de Recursos Humanos. Ofrecemos servicios con la finalidad de maximizar el talento de las personas y organizaciones."
           link="/servicios"
           linkText="Servicios"
+          image={<StaticImage src="../../static/servicios.jpg" alt="Banner Image" layout="fullWidth" placeholder="blurred" />}
         />
         <PerksModule>
           <Perk title="The Title" content="The content" />
