@@ -11,7 +11,10 @@ const Calculadora = () => {
     <>
       <Seo title="Calculadora de Sueldo Neto" />
       <Layout>
-        <SimpleBanner title="Calculadora de Sueldo Neto" subtitle="¡Usa esta calculadora para calcular el salario neto o bruto de un empleado!">
+        <SimpleBanner
+          title="Calculadora de Sueldo Neto"
+          subtitle="Usa está calculadora para determinar el sueldo neto que se paga de manera mensual, quincenal y semanal. Te permitirá conocer las deducciones del IMSS e ISR."
+        >
           <StaticImage className="banner__image" src="../../static/sueldo-neto-calculadora.jpg" alt="Calculadora sueldo neto" />
         </SimpleBanner>
         <CalculadoraSalarioNeto />
