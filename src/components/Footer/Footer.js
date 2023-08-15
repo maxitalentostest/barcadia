@@ -2,15 +2,9 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { menuItems } from "../../constants/links"
 import { FooterStyles, FooterMenuStyles, CopyrightStyles } from "./FooterStyles"
-import useAllProduct from "../../hooks/use-all-product"
 import useAllResource from "../../hooks/use-all-resource"
 import { UseSiteMetadata } from "../../hooks/useSiteMetadata"
-import {
-  FaFacebookSquare as Facebook,
-  FaTwitterSquare as Twitter,
-  FaInstagram as Instagram,
-  FaLinkedin as Linkedin,
-} from "react-icons/fa"
+import { FaFacebookSquare as Facebook, FaTwitterSquare as Twitter, FaInstagram as Instagram, FaLinkedin as Linkedin } from "react-icons/fa"
 
 const Footer = () => {
   const allResource = useAllResource()
@@ -19,7 +13,7 @@ const Footer = () => {
     <FooterStyles style={{ marginBottom: 0 }} className="section">
       <div className="container container__tight">
         <FooterMenuStyles className="footer__menu">
-          <h5>Links</h5>
+          <h5>Secciones</h5>
           <ul>
             {menuItems.map((item, index) => {
               return (
@@ -57,10 +51,7 @@ const Footer = () => {
           </FooterMenuStyles>
         )}
 
-        {siteMeta.twitterUsername ||
-        siteMeta.facebookUsername ||
-        siteMeta.instagramUsername ||
-        siteMeta.linkedinUsername ? (
+        {siteMeta.twitterUsername || siteMeta.facebookUsername || siteMeta.instagramUsername || siteMeta.linkedinUsername ? (
           <FooterMenuStyles className="footer__menu social__menu">
             <h5>
               Síguenos<span>.</span>
@@ -68,44 +59,28 @@ const Footer = () => {
             <ul>
               {siteMeta.twitterUsername && (
                 <li>
-                  <a
-                    href={`https://www.twitter.com/${siteMeta.twitterUsername}`}
-                    target="_blank"
-                    rel="nofollow noreferrer noopener"
-                  >
+                  <a href={`https://www.twitter.com/${siteMeta.twitterUsername}`} target="_blank" rel="nofollow noreferrer noopener">
                     <Twitter />
                   </a>
                 </li>
               )}
               {siteMeta.facebookUsername && (
                 <li>
-                  <a
-                    href={`https://www.facebook.com/profile.php?id=100093533521048`}
-                    target="_blank"
-                    rel="nofollow noreferrer noopener"
-                  >
+                  <a href={`https://www.facebook.com/profile.php?id=100093533521048`} target="_blank" rel="nofollow noreferrer noopener">
                     <Facebook />
                   </a>
                 </li>
               )}
               {siteMeta.instagramUsername && (
                 <li>
-                  <a
-                    href={`https://www.instagram.com/${siteMeta.instagramUsername}`}
-                    target="_blank"
-                    rel="nofollow noreferrer noopener"
-                  >
+                  <a href={`https://www.instagram.com/${siteMeta.instagramUsername}`} target="_blank" rel="nofollow noreferrer noopener">
                     <Instagram />
                   </a>
                 </li>
               )}
               {siteMeta.linkedinUsername && (
                 <li>
-                  <a
-                    href={`https://mx.linkedin.com/company/maxitalentos-mx`}
-                    target="_blank"
-                    rel="nofollow noreferrer noopener"
-                  >
+                  <a href={`https://mx.linkedin.com/company/maxitalentos-mx`} target="_blank" rel="nofollow noreferrer noopener">
                     <Linkedin />
                   </a>
                 </li>
@@ -116,21 +91,30 @@ const Footer = () => {
           ""
         )}
       </div>
-      <CopyrightStyles>
-        <div className="container container__tight">
-          <p>
-            Developed by{" "}
-            <a
-              href="https://www.linkedin.com/in/jose-a-mendez-hdz/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Jose Mendez
-            </a>
-            <span>.</span>
-          </p>
-        </div>
-      </CopyrightStyles>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <CopyrightStyles>
+          <div className="container container__tight">
+            <p>
+              Desarrollado por{" "}
+              <a href="https://www.linkedin.com/in/jose-a-mendez-hdz/" target="_blank" rel="noopener noreferrer">
+                Jose Mendez
+              </a>
+              <span>.</span>
+            </p>
+          </div>
+        </CopyrightStyles>
+        <CopyrightStyles>
+          <div className="container container__tight">
+            <p>
+              Theme by{" "}
+              <a href="https://www.morganbaker.dev/" target="_blank" rel="noopener noreferrer">
+                Morgan Baker Development
+              </a>
+              <span>.</span>
+            </p>
+          </div>
+        </CopyrightStyles>
+      </div>
     </FooterStyles>
   )
 }
