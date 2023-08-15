@@ -32,6 +32,16 @@ export const FooterStyles = styled.footer`
       }
     }
   }
+
+  .flex {
+    display: block;
+    justify-content: space-between;
+    padding-top: 40px;
+
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
 `
 
 export const FooterMenuStyles = styled.div`
@@ -118,7 +128,7 @@ export const FooterMenuStyles = styled.div`
 
 export const CopyrightStyles = styled.div`
   font-size: 13px;
-  padding-top: var(--gap);
+  /* padding-top: var(--gap); */
 
   p {
     margin: 0;

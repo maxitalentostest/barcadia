@@ -91,7 +91,7 @@ const Footer = () => {
           ""
         )}
       </div>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div className="flex">
         <CopyrightStyles>
           <div className="container container__tight">
             <p>

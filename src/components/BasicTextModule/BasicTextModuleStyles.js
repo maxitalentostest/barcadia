@@ -30,4 +30,12 @@ export const BasicTextModuleStyles = styled.section`
       display: flex;
     }
   }
+
+  .image {
+    margin-top: 40px;
+
+    @media (min-width: 768px) {
+      margin-top: 0;
+    }
+  }
 `

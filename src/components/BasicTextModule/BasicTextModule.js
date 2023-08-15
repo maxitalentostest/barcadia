@@ -13,7 +13,11 @@ const BasicTextModule = ({ title, content, link, linkText, image }) => {
 
           <Button text={linkText} as={Link} to={link} />
         </div>
-        <div style={{ width: "100%", borderRadius: "6px", border: "2px solid rgba(255, 255, 255, 0.15)" }}>{image}</div>
+        {image && (
+          <div className="image" style={{ width: "100%", borderRadius: "6px", border: "2px solid rgba(255, 255, 255, 0.15)" }}>
+            {image}
+          </div>
+        )}
       </div>
     </BasicTextModuleStyles>
   )
