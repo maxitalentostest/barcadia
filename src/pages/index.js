@@ -31,7 +31,7 @@ const Index = () => {
           content="Usa está calculadora para determinar el sueldo neto que se paga de manera mensual, quincenal y semanal. Te permitirá conocer las deducciones del IMSS e ISR."
           link="/calculadora-de-sueldo-neto"
           linkText="Visitar"
-          image={<StaticImage src="../../../static/calc.jpg" alt="Banner Image" layout="fullWidth" placeholder="blurred" />}
+          image={<StaticImage src="../../static/calc.jpg" alt="Banner Image" layout="fullWidth" placeholder="blurred" />}
         />
         <LatestPosts title="Autores" introduction="" />
       </Layout>
