@@ -72,7 +72,7 @@ const Producttemplate = (contentfulProduct) => {
   const productHeaderImage = getImage(headerImage)
   return (
     <>
-      <Seo title={title} description={metaDescription.metaDescription} />
+      <Seo title={title} description={metaDescription?.metaDescription} />
       <BannerModule title={title} price={price} subTitle={introduction} enquire={true}>
         <GatsbyImage className="banner__image" image={productHeaderImage} alt={title} />
       </BannerModule>
