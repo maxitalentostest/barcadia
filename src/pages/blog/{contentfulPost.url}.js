@@ -22,11 +22,7 @@ export const data = graphql`
       introduction
       price
       headerImage {
-        gatsbyImageData(
-          width: 2000
-          placeholder: BLURRED
-          formats: [AUTO, WEBP, AVIF]
-        )
+        gatsbyImageData(width: 2000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
       description {
         raw
@@ -35,6 +31,9 @@ export const data = graphql`
           contentful_id
           url
         }
+      }
+      metaDescription {
+        metaDescription
       }
     }
   }

@@ -68,30 +68,13 @@ const ProductGallery = styled.section`
 `
 
 const Producttemplate = (contentfulProduct) => {
-  const {
-    headerImage,
-    title,
-    price,
-    introduction,
-    description,
-    faqs,
-    gallery,
-  } = contentfulProduct
+  const { headerImage, title, price, introduction, description, faqs, gallery, metaDescription } = contentfulProduct
   const productHeaderImage = getImage(headerImage)
   return (
     <>
-      <Seo title={title} />
-      <BannerModule
-        title={title}
-        price={price}
-        subTitle={introduction}
-        enquire={true}
-      >
-        <GatsbyImage
-          className="banner__image"
-          image={productHeaderImage}
-          alt={title}
-        />
+      <Seo title={title} description={metaDescription.metaDescription} />
+      <BannerModule title={title} price={price} subTitle={introduction} enquire={true}>
+        <GatsbyImage className="banner__image" image={productHeaderImage} alt={title} />
       </BannerModule>
       <ProductTemplateStyles className="section">
         <div className="container container__tight">
